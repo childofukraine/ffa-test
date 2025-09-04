@@ -24,25 +24,58 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A NestJS application with microservices architecture featuring:
 
-## Project setup
+- Main API service with request management
+- Worker microservice for background processing
+- PostgreSQL database with TypeORM
+- Redis for caching
+- RabbitMQ for message queuing
+
+## Quick Start
+
+### Prerequisites
+
+- Node.js (v18+)
+- Docker and Docker Compose
+- npm or yarn
+
+### Step-by-Step Setup
+
+1. **Install dependencies**
 
 ```bash
-$ npm install
+npm install
 ```
 
-## Compile and run the project
+2. **Build the project**
 
 ```bash
-# development
-$ npm run start
+npm run build
+```
 
-# watch mode
-$ npm run start:dev
+3. **Start infrastructure services**
 
-# production mode
-$ npm run start:prod
+```bash
+npm run docker:up
+```
+
+4. **Run database migrations**
+
+```bash
+npm run migration:run
+```
+
+5. **Start the main application** (in a separate terminal)
+
+```bash
+npm run start:dev
+```
+
+6. **Start the worker service** (in another terminal)
+
+```bash
+npm run start:worker
 ```
 
 ## Run tests
