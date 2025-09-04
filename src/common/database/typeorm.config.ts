@@ -1,6 +1,5 @@
 import { DataSource, DataSourceOptions } from 'typeorm';
 import { databaseConfig } from '../configs/database.config';
-import { join } from 'path';
 
 export const typeOrmConfig: DataSourceOptions = {
   type: 'postgres',
